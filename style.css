@@ -52,3 +52,21 @@
 	padding-bottom: 5px;
 	margin-bottom: 20px;
 }
+#Back
+{
+	background-color: #1EB3B4;
+	colour: white;
+	text-align:center;
+	border-radius: 1px;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	margin-bottom: 1px;
+	margin-left: 400px;
+	margin-right: 400px;
+	border-radius: 5px;
+}
+#Summary
+{
+		margin-left: 150px;
+		margin-right: 150px;
+}
