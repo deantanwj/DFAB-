@@ -3,7 +3,6 @@
 	background-color: #1EB3B4;
 	colour: white;
 	text-align:center;
-	border-radius: 10px;
 	padding-top: 5px;
 	padding-bottom: 4px;
 	margin-bottom: 20px;
@@ -11,34 +10,45 @@
 #container
 {
 	background-color: #D4D4D4;
-	margin-left: auto;
+	height: 790px;
+}
+#Contact
+{
+	background-color: #1EB3B4;
+	text-align:center;
+	padding-top: 10px;
 	padding-bottom: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 3px;
+
+	
 }
 #Introduction
 {
-	background-color: #E1E1E1;
+	background-color: #EEEEEE;
 	text-align: center;
-	margin-right: auto;
-	margin-left: auto;
-	width: 1000px;
+	width: 820px;
 	border-radius: 50px;
 	padding-top: 5px;
-	padding-bottom: 5px;
+	padding-bottom: 50px;
 	margin-bottom: 20px;
+	margin-right: 125px;
+	padding-left: 10px;
+	padding-right 10px;
+	float: right;
 }
 #TL
 {
-	background-color: #E1E1E1;
+	background-color: #EEEEEE;
 	text-align: center;
-	margin-left: auto;
-	margin-right: auto;
-	width: 900px;
+	width: 400px;
 	border-radius: 20px;
-	border-width: 5px;
-	border-color: black;
 	padding-top: 5px;
 	padding-bottom: 5px;
 	margin-bottom: 20px;
+	margin-left: 125px;
+	float: left;
 }
 #PDF
 {
@@ -74,4 +84,13 @@
 	padding-left: 20px;
 	padding-right: 20px;
 	border-radius: 50px;
+}
+#Footer
+{
+	background-color: #AAAAAA;
+	float: bottom;
+	padding-right: 10px;
+	padding-top: 10px;
+	padding-bottom:10px;
+	text-align: right;
 }
