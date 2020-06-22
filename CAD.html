@@ -76,9 +76,52 @@
 					<li>Simulation: This mode performs simulation to determine how loads lead to deformation and failure, which can be used to help people identify or determine if and how a part will fail.</li></br>
 					<li>Manufacture: This generates tool-path strategies for the design to be fabricated.</li></br>
 					<li>Drawing: This is used to load a drawing or animation, such as the 2D Raster or Vector we had drawn and created in Photoshop.</li></ol></br>
-				</div>
-			We will be mainly using the design tab for creating a model from scratch, but if you have a 2D Drawing you can use the Drawing tab to import your drawing into Fusion360 to make it 3D. But for now, let's start with creating a model from scratch.
-			
+				</div></br></br>
+			We will be mainly using the design tab for creating a model from scratch, but if you have a 2D Drawing you can use the Drawing tab to import your drawing into Fusion360 to make it 3D. But for now, let's start with creating a model from scratch.<br/><br/>
+			First of all, we should start from creating a 2D Sketch or shape, using this button:<br/><br/>
+			<img src="Images/cad18.JPG" width="1100px"></br></br>
+			Upon clicking the Sketch Button, it will prompt you to select one of the three planes, and you can pick one of these to draw your shape or sketch on. Upon clicking one of these planes, it will give you this menu.</br></br>
+			<img src="Images/cad20.JPG" width="1100px"></br></br>
+			You can click one of the shape preset tools at the top left corner to create your shape, or use the custom line tools if those are not what you need. In this case, we will make a make an egg holder as an example, to demonstrate multiple functions that can be used. To start, we should create a silhoutte on the top plane.<br/><br/>
+			<img src="Images/cad19.JPG" width="1100px"></br></br>
+			As seen above, we are using the preset circle tool to create a circle which will serve as the base of the egg holder, and we can drag it with the mouse to adjust its size, or input a value to edit the diameter of the circle. The other Preset Tools generally function by the same logic. But this will not always help, especially if you're trying to make multiple sketches on the same plane.</br></br>
+			<img src="Images/cad21.JPG" width="1100px"></br></br>
+			As seen above, first you click the "Construct" Button, which can be found in the "Solid" Tab, which will then prompt you to select one of the three planes shown. Upon clicking one of these planes, it will prompt you in a popup window to select and input the distance between the new and the current selected plane. This will allow you to make sketches on the same dimension, but at different elevations.</br></br>
+			<img src="Images/cad22.JPG" width="1100px"></br></br>
+			As shown above, I have created two planes, the first 20mm above the plane aligned to the origin point, and the second 30mm above the previous plane created. Now, I can create sketches on those planes through the same process.
+			<img src="Images/cad23.JPG" width="1100px"></br></br>
+			As shown below, I have created multiple sketches at different elevations, but each of these are still 2D. To make them 3D, I can navigate to the "Solid" Tab to access various tools that will allow me to make these sketches 3D models. First of all, we will go through the "Extrude" function.</br></br>
+			<img src="Images/cad24.JPG" width="1100px"></br></br>
+			The extrude tool, when selected, will prompt you to select a profile, which in layman terms is essentially a sketch to extrude, which means it will extend the sketch outward in the direction the sketch is facing, which in this case is the top plane. After clicking the profile, it will prompt you to input the measurements or specification of the extrude, which in this case I will put 2mm.</br></br>
+			<img src="Images/cad25.JPG" width="1100px"></br></br>
+			Next, is the loft function, which essentially connects multiple profiles together to form a body. It can be accessed by clicking "Create" to access the drop down menu where "Loft" can be found.</br></br>
+			<img src="Images/cad26.JPG" width="1100px"></br></br>
+			After clicking "Loft", it will give you a pop up on the side, prompting you to select the profiles you would like to loft, and preview it as can be seen above. After clicking "OK", it will join them all together in a loft as one body.</br></br>
+			<img src="Images/cad27.JPG" width="1100px"></br></br>
+			Next, we will go through the function of "Shell". It can be accessed by clicking the above highlighted icon, and show the following below.
+			<img src="Images/cad28.JPG" width="1100px"></br></br>
+			WIth this, you will now be prompted to select a face, and it will essentially create a hole and hollow out the body connected to that. Using the Shell Tab that is given to you, you can control the thickness of the walls of the body.</br></br>
+			<img src="Images/cad29.JPG" width="1100px"></br></br>
+			Aside from Extrude and Shell, you can also use the "Fillet" Function, which rounds edges. It can be accessed through the "Modify" Section in the "Solid" tab.</br></br>
+			<img src="Images/cad30.JPG" width="1100px"></br></br>
+			Fillet essentially as mentioned, rounds corner or edges. If you click on the "Fillet" Button, it will prompt you to select an edge, face or feature, as shown below.</br></br>
+			<img src="Images/cad31.JPG" width="1100px"></br>
+			<img src="Images/cad32.JPG" width="1100px"></br></br>
+			Above you can see a comparison of what Fillet does to selected surfaces or edges, and upon selection, you can see that it will prompt you to input a radius for the curves. If you want to make different curves, you can edit and control that using the Fillet tab on the side.</br></br><hr/><br/>
+			Aside from these tools, the extrude tool also has some useful functions such as cutting out sections of a design. The following shows a sketch I made at the bottom of the of the body, and I will be using this to cut out sections.
+			<img src="Images/cad33.JPG" width="1100px"></br></br>
+			Now, with the selection of the extrude tool, you will have to navigate to the the the Extrude tab to change the "Operation" to "Cut". This will present you with this preview.</br></br>
+			<img src="Images/cad34.JPG" width="1100px"></br></br>
+			Be sure to take note of how thick part you are cutting is, and set the cut to only as much as you need. In this case, I wish to entirely remove certain sections to save material, and hence I will be cutting it to the thickness of the material, which in this case is 2mm.</br></br>
+			This is the main part of what I have, and I will be listing some of the 3D designs I have done below, including the one used for this demonstration.<br/><br/>	
+			Egg holder demonstration file:</br></br>
+			<iframe src="https://gmail874815.autodesk360.com/shares/public/SH56a43QTfd62c1cd9680e712aafae344877?mode=embed" width="1024" height="768" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"  frameborder="0"></iframe></br></br>
+			Modified Egg Holder with proper dimensions:</br></br>
+			<iframe src="https://gmail874815.autodesk360.com/shares/public/SH56a43QTfd62c1cd968ce44fa9ced0bba31?mode=embed" width="1024" height="768" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"  frameborder="0"></iframe></br></br>
+			Coin Tag:</br></br>
+			<iframe src="https://gmail874815.autodesk360.com/shares/public/SH56a43QTfd62c1cd9686acbbacca512a862?mode=embed" width="1024" height="768" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"  frameborder="0"></iframe></br></br>
+			Storage Box:</br></br>
+			<iframe src="https://gmail874815.autodesk360.com/shares/public/SH56a43QTfd62c1cd9688dac6c5df42b0b4a?mode=embed" width="1024" height="768" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"  frameborder="0"></iframe></br></br>
 			</p>
 		</div>
 		<div id="Back">
