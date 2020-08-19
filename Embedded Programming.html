@@ -88,9 +88,55 @@
 				</ul>
 				With all this in mind, why should you use Arduino? It is a system made to emulate the capabilities of their larger and more specialised equivalents, but ultimately, it is a system that is made to do what those systems can do.
 				<ul>
-					<li>Arduino is inexpensive, with the board costing lesser than $5, which is much lesser than what the specialised systems built to </li></br>/<br>
-					<li></li></br>/<br>
+					<li>Arduino is inexpensive, with the board costing lesser than $5, which is much lesser than what the specialised systems built to perform specific functions can cost.</li></br>/<br>
+					<li>Cross-platform capabilities, allowing people to use Mac, Linux, and Windows. This means that it is widely accessible by many people with different operating systems.</li></br>/<br>
+					<li>Simple programming environments using a user friendly GUI.</li></br>/<br>
+					<li>Open source software and hardware that is extensible.</li></br>/<br>
 				</ul>
+				With all of these incentives to use Arduino, it might be hard to decide which piece of hardware you should use. In those cases, you should refer to the various capabilities of each board according to what you need or want. However, in the case of this module, we are learning to use an Arduino Uno.</br></br>
+				<b>Arduino Uno</b><ul>
+					<li>Most common microcontroller board used to begin Arduino projects.</li>
+					<li>Uses an Atmel Atmega328P processor with a seperate programmable interface using another Atmel Processor and USB.</li>
+					<li>Has sockets for interfacing and power</li>
+				</ul></br>/<br>
+				After you choose your board, you will then need to learn how to program with the Arduino IDE. In the case of the Uno,<ul>
+					<li>it uses a bootloader (2K code), allowing programming through a USB interface on the board. The board runs code the order of:<ol>
+						<li>Processor starts up</li>
+						<li>Loads and runs bootloader</li>
+						<li>Loads program you are sending via USB if there is a programming command from the serial interface.</li>
+						<li>Otherwise, it will run the last loaded program</li>
+					</ol></li>
+					<li>With this in mind, it is understandable why through the use of the Bootloader and USB interface, it is so much easier do to work or test programs on Arduino systems.</li>
+				</ul>
+				The general workflow of using the Arduino IDE would be:<ol>
+					<li>Write your code.
+					<img src="Images/ep12.JPG" width="1160px" height="auto"></br></br></li>
+					<li>Compile/Verify your code.
+					<img src="Images/ep13.JPG" width="1160px" height="auto"></br></br></li>
+					<li>Upload your code to UNO board.
+					<img src="Images/ep14.JPG" width="1160px" height="auto"></br></br></li>
+					<li>Press Reset Button, which rather than resetting all data on the board, actually runs the board starting from the first line of code.
+					<img src="Images/ep15.JPG" width="1160px" height="auto"></br></br></li>
+					<li>Observe Results and make changes if and where needed.</br></br></li>
+				</ol>
+				This workflow can more or less be observed throughout all the variations of the UNO, as expected when something is open source.
+				The programming and usage are mostly the same with some minor variations from one board to another, but their I/O Ports are largely the same. The only real different would be in the cost of each board.</br></br>
+				All of this software can be found on the <a href="https://www.arduino.cc/en/main/software">Arduino Site</a>, and the latest version should be the one to be used, with the most updated one as of the time of updating this site being 1.8.12. 
+				The Arduino IDE software is available in different platforms, with many resources and help available to users through a simple search.</br></br>
+				The UNO boards require drivers, which for the most part, are the FTDI drivers for original boards, and the CH340 drivers for cheaper boards, which need to be installed. The how-to can be checked online with help from google,
+				but a guide I found useful can be found <a href="https://learn.sparkfun.com/tutorials/how-to-install-ch340-drivers/all">here</a>.</br></br>
+				After downloading the neccessary software, you will now need to know how to use the Arduino IDE. Generally the set up should follow this order: <ol>
+					<li>Firstly, you need to connect your UNO board to the computer running the Arduino IDE.
+					<img src="Images/ep16.JPG" width="1160px" height="auto"></br></br></li>
+					<li>Launch the Arduino IDE.</br></br></li>
+					<li>Setup the IDE.</br></br></li>
+					<li>Select the correct board that you are using, but in this case, the board should be the Arduino UNO.
+					<img src="Images/ep17.JPG" width="1160px" height="auto"></br></br></li>
+					<li>Identify and check the port the board is connected to.
+					<img src="Images/ep18.JPG" width="1160px" height="auto"></br></br></li>
+				</ol>
+				With this done, you should be clear to write programs, from which you can follow the earlier progression when writing programs, which are called "Sketches". You can load the example program "Blink" to test this out.</br>
+				<img src="Images/ep19.JPG" width="1160px" height="auto">
 				<hr/></br>
 				<h2>Electronic Protoyping</h2>
 				Electronic Prototyping involves using knowledge of electrical components and electricity to create a prototype, serving as an early sample or mockup of the project.</br>
