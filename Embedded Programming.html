@@ -135,8 +135,33 @@
 					<li>Identify and check the port the board is connected to.
 					<img src="Images/ep18.JPG" width="1160px" height="auto"></br></br></li>
 				</ol>
-				With this done, you should be clear to write programs, from which you can follow the earlier progression when writing programs, which are called "Sketches". You can load the example program "Blink" to test this out.</br>
-				<img src="Images/ep19.JPG" width="1160px" height="auto">
+				With this done, you should be clear to write programs, from which you can follow the earlier progression when writing programs, which are called "Sketches", with the extension of ".ino". You can load the example program "Blink" to test this out.</br>
+				<img src="Images/ep19.JPG" width="1160px" height="auto"></br></br>	
+				However, if you wish to write your own program, you will need to understand the functions of each section of the code, primarily, the the setup, loop, and Digital Input/Output.</br></br>
+				Setup()<ul>
+				<li>In the programming language, words with () behind them are called <b>Functions</b>. They carry out specific processes at specific times, with Setup() only being called and executed at the start of the script only once in its entire run time.</li>
+				<li>Setup() usually contains code that serves to inisitialise, or as the name implies, setup various settings or adjustments for the project and subsequent functions to function properly.</li>
+				<li>Contains variables to be initialised, and any I/O pins used.</li>
+				</ul></br></br>
+				Loop()<ul>
+				<li>Code in this section is run repeatedly, more specifically in an indefinite loop after Setup().</li>
+				<li>This can be used to trigger other functions upon certain conditions being met, or be used to count or continually change something such as a time based variable.</li>
+				</ul></br></br>
+				Things to keep in mind when programming:<ul>
+				<li>Comment any and all code written to remind yourself of what it does. If not for each, line, then at the very least each section that carry out their own tasks.</li>
+				<li>Use uppercases to denote constants</li>
+				<li>Add indents to your code</li>
+				</ul></br></br>
+				Digital Input/Output(I/O)<ul>
+					<li>The ATMega328 has 14 digital input/output ports.</li>
+					
+					<li>Digital Values (1 = 5V, 0 = 0V)</li>
+					<li>Some of these ports are multifunctional, but it depends on how they are initialised.</li>
+					<li>They can perform as Digital Inputs, which is the default,</li>
+					<li>Digital Outputs,</li>
+					<li>or Pulse width modulation outputs.</li>
+					<li>Arduino provides useful library functions for these purposes, simplifying programming.</li>
+				</ul>
 				<hr/></br>
 				<h2>Electronic Protoyping</h2>
 				Electronic Prototyping involves using knowledge of electrical components and electricity to create a prototype, serving as an early sample or mockup of the project.</br>
@@ -194,7 +219,23 @@
 				Printed Circuit Boards are boards that connect electronic components using copper tracks, with the components being soldered onto the PCB.</br>
 				These PCBs can be single, double, or multi-layered, with each "layer" referring to the conductive copper substrate layer(s) used on the board. These boards are made through two processes, chemical etching and mechanically engraved boards.
 				Generally, Mechanically engraved boards are recommended for prototyping over chemical etched boards due to the toxicity of the latter's manufacturing process.</br></br>
+				<hr/></br>
+				Exercise: Wire and interface one input device and output device to read inputs from the input device to trigger the output device.</br></br>
+				With this exercise in mind, I decided to use a micro servo motor as my output device, and two push buttons as my input. The goal would be to make a servo that constantly turned, and using the buttons, someone would be able to control the speed of the buttons.</br>
+				So, I started off by declaring variables to be used in the code, then putting in the setup code, and finally the loop code.
+				<img src="Images/ep21.JPG" width="1160px" height="auto"></br></br>
+				However, an error with the code popped up, saying that I was not allowed to lock buttons using boolean variables in the loop function. Hence, my fix to the solution was to create a function to unlock the buttons when both buttons were not pressed.</br>
+				And just when I thought I'd fixed the problem, I realised that there was a problem with the timing, and hence, due to not wanting to spend any more time on the exercise, changed it to a servo that turns 10 degrees in any direction when the corresponding button is pressed, resulting in this 
+				<a href="Scripts/Motor Spin.ino" Motor Spin>
+				<img src="/images/myw3schoolsimage.jpg" alt="W3Schools">
+				</a></br>
+				Next, I had to wire up a model to test if it would work, and hence, I used TinkerCAD, a website for making simulations of projects and found a similar circuit as reference. It can be found by clicking 
+				<a href="https://www.tinkercad.com/dashboard">here</a>.</br></br>
+				The simulation I made can be found here:
+				<a href="https://www.tinkercad.com/things/ezUUs0TgKu0-copy-of-speed-up-and-down-of-dc-motor-using-push-buttons">Simulation</a></br></br>
+				Now that the simulation was wired up, I needed to make the physical version by wiring components on a breadboard, and it looks like this:
 				
+				Shown below is a video of the result.
 				
 			</p>
 		</div>
