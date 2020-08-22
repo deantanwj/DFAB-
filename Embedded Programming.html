@@ -225,7 +225,71 @@
 				So, I started off by declaring variables to be used in the code, then putting in the setup code, and finally the loop code.
 				<img src="Images/ep21.JPG" width="1060px" height="auto"></br></br>
 				However, an error with the code popped up, saying that I was not allowed to lock buttons using boolean variables in the loop function. Hence, my fix to the solution was to create a function to unlock the buttons when both buttons were not pressed.</br>
-				And just when I thought I'd fixed the problem, I realised that there was a problem with the timing, and hence, due to not wanting to spend any more time on the exercise, changed it to a servo that turns 10 degrees in any direction when the corresponding button is pressed, resulting in this 
+				And just when I thought I'd fixed the problem, I realised that there was a problem with the timing, and hence, due to not wanting to spend any more time on the exercise, changed it to a servo that turns 10 degrees in any direction when the corresponding button is pressed, resulting in this</br>
+				<pre>
+<font color="#5e6d03">#include</font> <font color="#434f54">&lt;</font><b><font color="#d35400">Servo</font></b><font color="#434f54">.</font><font color="#000000">h</font><font color="#434f54">&gt;</font>
+
+<font color="#00979c">bool</font> <font color="#000000">pressed1</font> <font color="#434f54">=</font> <font color="#00979c">false</font><font color="#000000">;</font> <font color="#434f54">&#47;&#47; Used to detect if Button 1 was already pressed</font>
+<font color="#00979c">bool</font> <font color="#000000">pressed2</font> <font color="#434f54">=</font> <font color="#00979c">false</font><font color="#000000">;</font> <font color="#434f54">&#47;&#47; Used to detect if Button 2 was already pressed</font>
+<font color="#00979c">int</font> <font color="#000000">servoPin</font> <font color="#434f54">=</font> <font color="#000000">9</font><font color="#000000">;</font> <font color="#434f54">&#47;&#47; Used to initialise the pin the servo is connected to.</font>
+<font color="#00979c">int</font> <font color="#000000">pwr1</font> <font color="#434f54">=</font> <font color="#000000">0</font><font color="#000000">;</font> <font color="#434f54">&#47;&#47; Used to power button 1</font>
+<font color="#00979c">int</font> <font color="#000000">pwr2</font> <font color="#434f54">=</font> <font color="#000000">0</font><font color="#000000">;</font> <font color="#434f54">&#47;&#47; Used to power button 2</font>
+<b><font color="#d35400">Servo</font></b> <font color="#000000">servo</font><font color="#000000">;</font> <font color="#434f54">&#47;&#47; Declaring servo unit</font>
+<font color="#00979c">int</font> <font color="#000000">turnSpeed</font> <font color="#434f54">=</font> <font color="#000000">90</font><font color="#000000">;</font><font color="#434f54">&#47;&#47; sets angle of the motor</font>
+<font color="#00979c">bool</font> <font color="#000000">lockState</font> <font color="#434f54">=</font> <font color="#00979c">false</font><font color="#000000">;</font> <font color="#434f54">&#47;&#47; Buttons are unlocked.</font>
+
+<font color="#00979c">void</font> <font color="#5e6d03">setup</font><font color="#000000">(</font><font color="#000000">)</font>
+<font color="#000000">{</font>
+ &nbsp;<font color="#434f54">&#47;&#47; put your setup code here, to run once:</font>
+ &nbsp;<font color="#d35400">pinMode</font><font color="#000000">(</font><font color="#000000">4</font><font color="#434f54">,</font><font color="#00979c">INPUT</font><font color="#000000">)</font><font color="#000000">;</font> <font color="#434f54">&#47;&#47; Initialise pin 4 for Button 1</font>
+ &nbsp;<font color="#d35400">pinMode</font><font color="#000000">(</font><font color="#000000">5</font><font color="#434f54">,</font><font color="#00979c">INPUT</font><font color="#000000">)</font><font color="#000000">;</font> <font color="#434f54">&#47;&#47; Initialise pin 5 for button 2</font>
+ &nbsp;<font color="#d35400">pinMode</font><font color="#000000">(</font><font color="#000000">servoPin</font><font color="#434f54">,</font><font color="#00979c">OUTPUT</font><font color="#000000">)</font><font color="#000000">;</font> <font color="#434f54">&#47;&#47; Initialise servo pin</font>
+ &nbsp;<font color="#d35400">digitalWrite</font><font color="#000000">(</font><font color="#000000">4</font><font color="#434f54">,</font><font color="#00979c">HIGH</font><font color="#000000">)</font><font color="#000000">;</font> <font color="#434f54">&#47;&#47; Initialise button1 press</font>
+ &nbsp;<font color="#d35400">digitalWrite</font><font color="#000000">(</font><font color="#000000">5</font><font color="#434f54">,</font><font color="#00979c">HIGH</font><font color="#000000">)</font><font color="#000000">;</font> <font color="#434f54">&#47;&#47; Initialise button2 press</font>
+ &nbsp;<font color="#000000">servo</font><font color="#434f54">.</font><font color="#d35400">attach</font><font color="#000000">(</font><font color="#000000">9</font><font color="#000000">)</font><font color="#000000">;</font>
+ &nbsp;<font color="#000000">servo</font><font color="#434f54">.</font><font color="#d35400">write</font><font color="#000000">(</font><font color="#000000">turnSpeed</font><font color="#000000">)</font><font color="#000000">;</font>
+<font color="#000000">}</font>
+
+<font color="#00979c">void</font> <font color="#5e6d03">loop</font><font color="#000000">(</font><font color="#000000">)</font>
+<font color="#000000">{</font>
+ &nbsp;<font color="#434f54">&#47;&#47; put your main code here, to run repeatedly:</font>
+ &nbsp;<font color="#000000">pwr1</font> <font color="#434f54">=</font> <font color="#d35400">digitalRead</font><font color="#000000">(</font><font color="#000000">4</font><font color="#000000">)</font><font color="#000000">;</font> <font color="#434f54">&#47;&#47; Assigning values to button 1</font>
+ &nbsp;<font color="#000000">pwr2</font> <font color="#434f54">=</font> <font color="#d35400">digitalRead</font><font color="#000000">(</font><font color="#000000">5</font><font color="#000000">)</font><font color="#000000">;</font><font color="#434f54">&#47;&#47; Assigning values to button 2</font>
+ &nbsp;
+ &nbsp;<font color="#434f54">&#47;&#47; This section is used to handle inputs from the buttons</font>
+ &nbsp;<font color="#5e6d03">if</font><font color="#000000">(</font><font color="#000000">pwr1</font><font color="#434f54">==</font><font color="#00979c">LOW</font> <font color="#434f54">&amp;&amp;</font> <font color="#000000">pressed1</font><font color="#434f54">==</font><font color="#00979c">false</font><font color="#000000">)</font> <font color="#434f54">&#47;&#47; If button 1 is pressed once and is not locked</font>
+ &nbsp;<font color="#000000">{</font>
+ &nbsp;&nbsp;&nbsp;<font color="#000000">pressed1</font> <font color="#434f54">=</font> <font color="#00979c">true</font><font color="#000000">;</font> <font color="#434f54">&#47;&#47; Lock Button 1 to prevent spam</font>
+ &nbsp;&nbsp;&nbsp;<font color="#000000">pressed2</font> <font color="#434f54">=</font> <font color="#00979c">true</font><font color="#000000">;</font> <font color="#434f54">&#47;&#47; Lock Button 2 to prevent spam</font>
+ &nbsp;&nbsp;&nbsp;<font color="#000000">lockState</font> <font color="#434f54">=</font> <font color="#00979c">true</font><font color="#000000">;</font> <font color="#434f54">&#47;&#47; Buttons are locked</font>
+ &nbsp;&nbsp;&nbsp;<font color="#000000">turnSpeed</font> <font color="#434f54">=</font> <font color="#000000">turnSpeed</font> <font color="#434f54">-</font> <font color="#000000">10</font><font color="#000000">;</font><font color="#434f54">&#47;&#47; increase turn speed by lowering delay </font>
+ &nbsp;&nbsp;&nbsp;<font color="#000000">servo</font><font color="#434f54">.</font><font color="#d35400">write</font><font color="#000000">(</font><font color="#000000">turnSpeed</font><font color="#000000">)</font><font color="#000000">;</font> <font color="#434f54">&#47;&#47; turn to new position</font>
+ &nbsp;<font color="#000000">}</font><font color="#5e6d03">else</font> <font color="#5e6d03">if</font><font color="#000000">(</font><font color="#000000">lockState</font><font color="#434f54">==</font><font color="#00979c">true</font><font color="#000000">)</font> <font color="#434f54">&#47;&#47; If button 1 and 2 is let go and buttons are still locked</font>
+ &nbsp;<font color="#000000">{</font>
+ &nbsp;&nbsp;&nbsp;<font color="#000000">Unlock</font><font color="#000000">(</font><font color="#000000">)</font><font color="#000000">;</font>
+ &nbsp;<font color="#000000">}</font>
+ &nbsp;
+ &nbsp;<font color="#5e6d03">if</font><font color="#000000">(</font><font color="#000000">pwr2</font><font color="#434f54">==</font><font color="#00979c">LOW</font> <font color="#434f54">&amp;&amp;</font> <font color="#000000">pressed2</font><font color="#434f54">==</font><font color="#00979c">false</font><font color="#000000">)</font> <font color="#434f54">&#47;&#47; If button 2 is pressed and is not locked</font>
+ &nbsp;<font color="#000000">{</font>
+ &nbsp;&nbsp;&nbsp;<font color="#000000">pressed1</font> <font color="#434f54">=</font> <font color="#00979c">true</font><font color="#000000">;</font> <font color="#434f54">&#47;&#47; Lock Button 1 to prevent spam</font>
+ &nbsp;&nbsp;&nbsp;<font color="#000000">pressed2</font> <font color="#434f54">=</font> <font color="#00979c">true</font><font color="#000000">;</font> <font color="#434f54">&#47;&#47; Lock Button 2 to prevent spam</font>
+ &nbsp;&nbsp;&nbsp;<font color="#000000">lockState</font> <font color="#434f54">=</font> <font color="#00979c">true</font><font color="#000000">;</font> <font color="#434f54">&#47;&#47; Buttons are locked</font>
+ &nbsp;&nbsp;&nbsp;<font color="#000000">turnSpeed</font> <font color="#434f54">=</font> <font color="#000000">turnSpeed</font> <font color="#434f54">+</font> <font color="#000000">10</font><font color="#000000">;</font> <font color="#434f54">&#47;&#47; decrease turn speed by increasing delay</font>
+ &nbsp;&nbsp;&nbsp;<font color="#000000">servo</font><font color="#434f54">.</font><font color="#d35400">write</font><font color="#000000">(</font><font color="#000000">turnSpeed</font><font color="#000000">)</font><font color="#000000">;</font> <font color="#434f54">&#47;&#47; turn to new posiiton</font>
+ &nbsp;<font color="#000000">}</font><font color="#5e6d03">else</font> <font color="#5e6d03">if</font><font color="#000000">(</font><font color="#000000">lockState</font><font color="#434f54">==</font><font color="#00979c">true</font><font color="#000000">)</font> <font color="#434f54">&#47;&#47; If button 1 and 2 is let go and buttons are still locked</font>
+ &nbsp;<font color="#000000">{</font>
+ &nbsp;&nbsp;&nbsp;<font color="#000000">Unlock</font><font color="#000000">(</font><font color="#000000">)</font><font color="#000000">;</font>
+ &nbsp;<font color="#000000">}</font>
+<font color="#000000">}</font>
+
+<font color="#00979c">void</font> <font color="#000000">Unlock</font><font color="#000000">(</font><font color="#000000">)</font>
+<font color="#000000">{</font>
+ &nbsp;<font color="#000000">pressed1</font> <font color="#434f54">=</font> <font color="#00979c">false</font><font color="#000000">;</font> <font color="#434f54">&#47;&#47; Unlock Button 1</font>
+ &nbsp;<font color="#000000">pressed2</font> <font color="#434f54">=</font> <font color="#00979c">false</font><font color="#000000">;</font> <font color="#434f54">&#47;&#47; Unlock Button 2</font>
+ &nbsp;<font color="#000000">lockState</font> <font color="#434f54">=</font> <font color="#00979c">false</font><font color="#000000">;</font>
+<font color="#000000">}</font>
+
+</pre>
 				<a href="Scripts/Motor_Spin/Motor Spin.ino" download>
 				
 				Next, I had to wire up a model to test if it would work, and hence, I used TinkerCAD, a website for making simulations of projects and found a similar circuit as reference. It can be found by clicking 
