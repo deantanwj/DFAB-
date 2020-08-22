@@ -32,44 +32,102 @@
 					<dt>Research possible ideas</dt>
 					<dd>Research more details and look for existing designs that are similar or the same as my ideas.</br>
 					Status: Completed</dd></br></br>
-					<dt>Check with lecturers on project scope</dt>
-					<dd>Check with lecturers on the feasability and safety of the scoped project</br>
-					Status: Completed (?) </dd></br></br>
+					
 					<dt>Produce Preliminary Sketches</dt>
 					<dd>Preliminary Sketches should be produced for a more visual representation of the project idea.</br>
-					Status: Completed (?) </dd></br></br>
+					Status: Completed </dd></br></br>
+					
 					<dt>Produce Bill of Materials (BOM)</dt>
 					<dd>A bill of materials is used to help identify a total list of items and components that are needed in the prodiction and construction of the project</br>
 					Status: Completed</dd></br></br>
-					<dt>
+					
+					<dt>Check with lecturers on project scope</dt>
+					<dd>Check with lecturers on the feasability and safety of the scoped project</br>
+					Status: Completed</dd></br></br>
+					
+					<dt>Designing CAD model and make any changes if needed.</dt>
+					<dd>Start making or modifying any existing designs to make the needed changes to plan out the production of the final project.
+					Status: Completed</dd></br></br>
 					
 					
 				</dl></br></br>
 				<h2>Bill of Materials</h2>
-				<ol>
-					<li>Arduino Nano</li></br></br>
-					<li>1x 128X64 I2C SSD1306 OLED display(uncollected)</li></br></br>
-					<li>1x Rotary encoder(uncollected)</li></br></br>
-					<li>1x DuPont terminal block pin header 2mm 2 row *5p needle splitter pin header</li></br></br>
-					<li>11x 10cm Male to female jumper wires(uncollected)</li></br></br>
-				</ol>
+				<dl>
+					<dt><b>Final Bill of Materials Collected</b></dt>
+					<dd>This final list is created after simplifying the circuit as much as possible, removing unneccessary components, and changing the board to a Digispark ATTiny85 by choice of the lecturer. In this case, no other power aside from
+					the board's USB connection to a host computer is needed as there are no physical output devices, cutting down on the components needed.</dd>
+					<dt>1x Digispark ATTiny85 Board</dt>
+					<dd>The Digispark board will serve to collect input from the Rotary Encoder and adjust the volume on the connected computer respectively, and is powered by the USB connection to the computer.</dd>
+					<dt>1x Rotary Encoder</dt>
+					<dd>The Rotary Encoder is used here as the primary input device.</dd>
+					<dt>10x Short Dupont Female to Female Jumper Wires</dt>
+					<dd>The cables are used to make the needed connections in the circuit between the board and the rotary encoder.</br></br>
+					<dt>Data Transfer Micro USB Cable</dt>
+					<dd>Used to transfer data and input between the board and the computer</dd>
+					<dt>Additional Materials that are not electrical components:</dt>
+					<dd>3mm thickness plywood, used for lasercutting pieces to form the main housing of the circuit.</br>
+					3d Printed Knob made for Rotary Encoder</dd></br></br>
+				</dl>	
+				<dl>
+					<dt><b>Bill of Materials V2</b></dt>
+					<dd>This list is slightly edited after consulting with the lecturer about ways to go about assembly of the project.</dd>
+					<dt>1x Arduino UNO Board</dt>
+					<dd>The Arduino UNO board is used in place of the Arduino Nano as it is functionally similar to the Nano and the UNO is given to us by default in our kit. This was later replaced by the Digispark.</dd>
+					<dt>1x Rotary Encoder</dt>
+					<dd>The Rotary Encoder is used here as the primary input device.</dd>
+					<dt>1x DuPont terminal block pin header 2mm 2 row *5p needle splitter pin header</dt>
+					<dd>This is a power bus that is meant to provide power to the OLED Display. However, it is later removed as the OLED Display is made redundant by the computer screen showing the sound changes in the form of visual feedback.</dd>
+					<dt>1x 128X64 I2C SSD1306 OLED display</dt>
+					<dd>An OLED Display that was changed from the original due to availability of Fablab. This is later removed as it is made redundant by the computer's visual feedback of volume changes.</dd>
+					<dt>11x 10cm Male to female jumper wires(uncollected)</dt>
+					<dd>Wires used to make connections between the Power Bus, UNO board, display, and rotary encoder. Later changed to Female Female cables due to the change to the use of a Digispark and the removal of the power bus and OLED Display.</dd></br></br>
+					<dt>Additional Materials that are not electrical components:</dt>
+					<dd>3mm thickness plywood, used for lasercutting pieces to form the main housing of the circuit.</br>
+					3d Printed Knob made for Rotary Encoder</dd></br></br>
+				</dl>
+				<dl>
+					<dt><b>Bill of Materials V2</b></dt>
+					<dd>This list is slightly edited after consulting with the lecturer about ways to go about assembly of the project.</dd>
+					<dt>1x Arduino UNO Board</dt>
+					<dd>The Arduino UNO board is used in place of the Arduino Nano as it is functionally similar to the Nano and the UNO is given to us by default in our kit. This was later replaced by the Digispark.</dd>
+					<dt>1x Rotary Encoder</dt>
+					<dd>The Rotary Encoder is used here as the primary input device.</dd>
+					<dt>1x DuPont terminal block pin header 2mm 2 row *5p needle splitter pin header</dt>
+					<dd>This is a power bus that is meant to provide power to the OLED Display. However, it is later removed as the OLED Display is made redundant by the computer screen showing the sound changes in the form of visual feedback.</dd>
+					<dt>1x 128x32 I2C OLED display</dt>
+					<dd>The original OLED display intended for use, but changed due to availability of Fablab. This is later removed as it is made redundant by the computer's visual feedback of volume changes.</dd>
+					<dt>WS2812 5050 LED Ring 8-bit</dt>
+					<dd>Used to show visual feedback of change in volume, but removed due to lack of availability and redunduncy.</dd>
+					<dt>11x 10cm Male to female jumper wires(uncollected)</dt>
+					<dd>Wires used to make connections between the Power Bus, UNO board, display, and rotary encoder. Later changed to Female Female cables due to the change to the use of a Digispark and the removal of the power bus and OLED Display.</dd></br></br>
+					<dt>Additional Materials that are not electrical components:</dt>
+					<dd>3mm thickness plywood, used for lasercutting pieces to form the main housing of the circuit.</br>
+					1x 3d Printed Knob made for Rotary Encoder</br>
+					4x M2 10mm Countersink screws for fastening components in place.</br>
+					6x M2 5mm Screws for fastening components in place.</br>
+					4x Silicon bumper 2x8mm for fastening components in place.</dd></br></br>
+				</dl>
 				<hr/></br></br>
 				In preparation for this project, I've done some preliminary research on the ideas I had shortlisted, listed below, along with an evaluation on the feasability of each choice:
 				<dl>
 					<dt>Mood Lamp</dt>
-					<dd>The first idea I had was to make a mood lamp / light based clock, with the light changing based on the time, as shown below.
-					<img src="Images/fp1.JPG" width="1160px" height="auto"></br>
+					<dd>The first idea I had was to make a mood lamp / light based clock, with the light changing based on the time, as shown below.</br>
+					<img src="Images/fp1.jpg" width="1160px" height="auto"></br>
+					I had also found a similar project to the idea I had in theory, and it can be found <a href="https://www.instructables.com/id/Mood-Lamp-with-Arduino/">here.</a></br></br>
 					 However, I rejected the idea for two reasons. The first was that I did not know how to program some of the functions, and I felt that it would be fairly redundant and not serve a practical purpose for most people,
 					 as their functions can be replaced by other appliances such as mobile phones.</br></br></dd>
 					<dt>Useless Machine</dt>
 					<dd> I had intended to make a useless machine, but I could not find any interesting designs that could accomplish or serve a practical use, hence I scrapped the idea and moved onto looking at interesting parts 
-					that I wanted to try working with.</dd></br></br>
+					that I wanted to try working with. However, an example of what I had intended to do can be found <a href="https://www.instructables.com/id/Arduino-Most-Useless-Machine-Ever-project/">here.</a></dd></br></br>
 					<dt>USB Audio Control device</dt>
 					<dd>I found an interesting design that I wanted to try, and found a design that mainly made use of a rotary encoder for all its inputs, managed by an Arduino Nano. It allows the user to switch and cycle through various programs to adjust their audio,
-					with a visual indicator to the audio level using an OLED display. Below is a sketch.</dd>
-					<img src="Images/fp1.JPG" width="1160px" height="auto"></br></br>
-					Due to my personal interest in the use of the rotary encoder, this is the first selection of projects I would like to do, followed by the mood lamp, and then the useless machine.
+					with a visual indicator to the audio level using an OLED display. Below is a sketch.</br>
+					<img src="Images/fp2.Jjpg" width="1160px" height="auto"></br>
+					The idea was heavily inspired by this project by Ruben Henares that uses a program called Maxmix, made for use with Arduino. The official website for its development can be found 
+					<a href="https://maxmixproject.com/">here.</a></br>
+					Due to my personal interest in the use of the rotary encoder, this is the first selection of projects I would like to do, followed by the mood lamp, and then the useless machine.</br></br></dd>				
 				</dl>
+				</hr>
 			</p>
 		</div>
 		<div id="Back">
