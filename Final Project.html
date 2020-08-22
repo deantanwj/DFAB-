@@ -122,7 +122,7 @@
 				<dl>
 					<dt>Mood Lamp</dt>
 					<dd>The first idea I had was to make a mood lamp / light based clock, with the light changing based on the time, as shown below.</br>
-					<img src="Images/fp1.jpg" width="1160px" height="auto"></br>
+					<img src="Images/fp1.jpg" width="1060px" height="auto"></br>
 					I had also found a similar project to the idea I had in theory, and it can be found <a href="https://www.instructables.com/id/Mood-Lamp-with-Arduino/">here.</a></br></br>
 					 However, I rejected the idea for two reasons. The first was that I did not know how to program some of the functions, and I felt that it would be fairly redundant and not serve a practical purpose for most people,
 					 as their functions can be replaced by other appliances such as mobile phones.</br></br></dd>
@@ -132,12 +132,30 @@
 					<dt>USB Audio Control device</dt>
 					<dd>I found an interesting design that I wanted to try, and found a design that mainly made use of a rotary encoder for all its inputs, managed by an Arduino Nano. It allows the user to switch and cycle through various programs to adjust their audio,
 					with a visual indicator to the audio level using an OLED display. Below is a sketch.</br>
-					<img src="Images/fp2.Jjpg" width="1160px" height="auto"></br>
+					<img src="Images/fp2.jpg" width="1060px" height="auto"></br>
 					The idea was heavily inspired by this project by Ruben Henares that uses a program called Maxmix, made for use with Arduino. The official website for its development can be found 
 					<a href="https://maxmixproject.com/">here.</a></br>
-					Due to my personal interest in the use of the rotary encoder, this is the first selection of projects I would like to do, followed by the mood lamp, and then the useless machine.</br></br></dd>				
+					Due to my personal interest in the use of the rotary encoder, this is the first selection of projects I would like to do, followed by the mood lamp, and then the useless machine.</br></br></dd></br>		
 				</dl>
-				</hr>
+				</hr></br></br>
+				Upon consultation with the lecturer about the idea, he gave the green light for this, on the condition that improvements and changes were made to the design's circuit's housing, and improvements were made to the design
+				to serve purposes, and that a few of the materials/electrical components I had wanted could not be used. With this in mind I decided make revisions to the design. All the following changes can be summarised in this section:</br></br>
+				<b>1st Revision</b><ul>
+					<li>I decided to remove small parts such as the screws and silicon bumpers, as I felt that they were unneccessary and the other parts could be secured in much better ways that used lesser materials, or materials that could be recycled for this purpose.</li>
+					<li>I decided to remove the OLED ring as I felt that the visual feedback would not be needed as you would have the screen display for visual feedback, and the sound volume being changed as audial feedback.</li>
+					<li>The OLED Display had to be changed due to a lack of availability of the original desired OLED.</li>
+					<li>To make changes from the original design by Ruben Henares, I had wanted to make the microboard controller be the Arduino UNO, and make the design have a slot that accomodated both boards.</li>
+					<li>I decided to add indicators on the knob for the user to have an easier time using it, so they would know which direction of turning the knob would give them what result.</li>
+					<li>I decided to make holes in the base of the box to drain water and provide more air ventilation on the off chance that the parts could overheat if put in a closed box.</li>
+				</ul></br></br>
+				<b>2nd Revision</b><ul>
+					<li>I decided to add grooves on the knob to make it easier to hold as I realised that it might be hard to hold since it would be 3D Printed.</li>
+					<li>I decided to make the main box laser cut, and parametric, so any of the sides could be removed and reassembled back easily.</li>
+					<li>I realised that visual feedback would not be needed, as later versions of most operating systems show up with the audio information on screen if it is changed, and hence decided to remove the OLED display and power bus.</li>
+					<li>The UNO was changed to a Digispark ATTiny85.</li>
+					<li>I could no longer use the code from the original website I had wanted, and had to change the code.</li>
+				</ul></br></br>
+				</hr></br></br>
 			</p>
 		</div>
 		<div id="Back">
