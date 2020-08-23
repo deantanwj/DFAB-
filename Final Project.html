@@ -119,6 +119,7 @@
 					4x Silicon bumper 2x8mm for fastening components in place.</dd></br></br></br>
 				</dl>
 				<hr/></br></br>
+				<h2>Research, Ideas, and Preliminary Sketches</h2>
 				In preparation for this project, I've done some preliminary research on the ideas I had shortlisted, listed below, along with an evaluation on the feasability of each choice:
 				<dl>
 					<dt>Mood Lamp</dt>
@@ -139,6 +140,7 @@
 					Due to my personal interest in the use of the rotary encoder, this is the first selection of projects I would like to do, followed by the mood lamp, and then the useless machine.</br></br></dd></br>		
 				</dl>
 				</hr></br></br>
+				<h2>Consultation with Lecturer and Revisions made to project</h2>
 				Upon consultation with the lecturer about the idea, he gave the green light for this, on the condition that improvements and changes were made to the design's circuit's housing, and improvements were made to the design
 				to serve purposes, and that a few of the materials/electrical components I had wanted could not be used. With this in mind I decided make revisions to the design. All the following changes can be summarised in this section:</br></br>
 				<b>1st Revision</b><ul>
@@ -159,8 +161,8 @@
 				</ul></br></br>
 				</hr></br></br>
 				At this point, I had not yet gotten the measurements of my components, and at this point, I was at the second revision and was putting designing the model off until I had collected the components and could get the physical components as I was worried about the parts that I would receive varying slightly from the actual components,
-				but at that point I was running out of time to work on the project, and other modules required a lot of my time, and hence decided to start working on the parts and some room for error and physical adjustment for when I received the parts, taking reference for measurements from the original design by Ruben Henares.</br></br>
-				
+				but at that point I was running out of time to work on the project, and other modules required a lot of my time, and hence decided to start working on the parts and some room for error and physical adjustment for when I received the parts, taking reference for measurements from the original design by Ruben Henares.</br></br></br>
+				<h2>3D Printed Parts and CAD.</h2>
 				First, I started with the knob, as I felt that would be the part that would be the easiest to scale up and down, and used the basic knob made by Ruben Henares, adding the indents on the top of the knob.</br>
 				The original design can be found on Thingiverse <a href="https://www.thingiverse.com/thing:4343186">here</a>. 
 				As intended, I started with the knob, which looked like this:</br></br>
@@ -188,9 +190,76 @@
 				<img src="Images/fp13.jpg" width="530px" height="auto"></br></br>
 				Some problems with this was that the indentations are too smooth, and the plus and minus is too small and smooth. However, the grooves was fine and worked as intended.</br></br>
 				<img src="Images/fp14.jpg" width="1060px" height="auto"></br></br>
-				To fix this, I used a pen to mark out the indentations.</br></br>
+				To fix this, I used a marker meant for panel lining plastic model kits to mark out the indentations, which worked, but the downside is that it left a few undesirable marks in the small seams that came from 3D Printing the knob.</br></br>
 				<img src="Images/fp15.jpg" width="1060px" height="auto"></br></br>
+				The indentations aside, another problem I later discovered after receiving the actual rotary encoder, was that that the rotary encoder's head was barely bigger than the slot on the bottom of the knob. 
+				Due to not wanting to 3D print a whole new knob just for this and waste materials, I decided to use an exacto knife to slowly scratch material off inside the slot to make it bigger until it would finally fit onto 
+				the rotary encoder's head, which looks like this:</br></br>
+				<img src="Images/fp16.jpg" width="530px" height="auto"></br></br>
+				<img src="Images/fp17.jpg" width="530px" height="auto"></br></br>
+				If you wish to do this project as well, the files can be downloaded below:</br>
+				<a href="Final Project/Final Project.f3d" download>Final Project CAD File</a>.</br></br>
+				<a href="Final Project/Knob/Final Project Knob STL.stl" download>Final Project Knob STL</a>.</br></br>
+				<a href="Final Project/Knob/Final Project Knob STL.gcode" download>UM2_Final Project Knob STL</a>.</br></br>
+				</br></br>
+				</hr></br></br>
+				<h2>Laser Cutting and CAD</h2>
+				After finishing the knob, the only other part that needs to be made is the box itself, 
+				which is parametric and made from 3mm plywood on all sides, on the logic thatby making it parametric, it should fit together perfectly, 
+				but not be too tight that each side cannot be removed should something need to be added to the circuit inside or replaced.</br></br>
+				Again, I followed the dimensions specified by the original design, creating an internal storage space that measured 70mm on both sides of the box, both length and width wise, and measured 18.50mm tall.</br>
+				With this in mind, I started out by creating a square on a sketch that measured 70mm, and added teeth that measured 10mm in 10 mm intervals.</br></br>
+				<img src="Images/fp18.jpg" width="1060px" height="auto"></br></br>
+				Next, I removed the square that I used as a base, adding in the bottom holes. After much deliberation I decided to make the holes extend out on all sides, like this.</br></br>
+				<img src="Images/fp19.jpg" width="1060px" height="auto"></br></br>
+				I did this by drawing lines from corner to the other, drawing lines between them in intervals before removing the original diagonal lines to make each hole its own.</br></br>
+				Now that I had completed the base, I had originally intended to make it a proper box, but as mentioned earlier, did not want to risk dealing with the hairline burning too much material,
+				and hence decided to simply move onto the drawings, drawing the sides in a mirror fashion to fit into the base's teeth, but extended the sides' teeth to be 0.5mm longer on both sides, like this:</br></br>
+				<img src="Images/fp20.jpg" width="200px" height="auto">
+				<img src="Images/fp21.jpg" width="860px" height="auto"></br></br>
+				By doing this, my intention was that after cutting out the pieces, I could simply sand down the larger teeth to fit perfectly and tightly, as I had sandpaper at home from my own hobbies. Subsequently,
+				I made the top piece, which was done by using the same bottom piece sketch, removing the center holes and adding a large hole in the center for the knob which measured about 42mm in diameter, and added 
+				the last two sides which only needed changing of the corner teeth to fit into the other sides, and I added in a hole for the wire and board's micro USB port.</br></br>
+				<img src="Images/fp22.jpg" width="1060px" height="auto"></br></br>
+				And with this, I could export this as a .dxf file, and send it for laser cutting. However, during laser cutting, i found that there were some double lines, which serves as a reminder that when doing this, 
+				you need to be observant, and the best way to avoid double lines is to draw the entire shape in one single smooth line. While I had forgotten to take pictures of the set up for laser cutting, I managed to 
+				get a picture of the pieces after they were done laser cutting, which worked out as intended.</br></br>
+				<img src="Images/fp23.jpg" width="1060px" height="auto"></br></br>
+				After pushing them out, I then had to sand them down, and after making everything fit nicely, I was left with this:</br></br>
+				<img src="Images/fp24.jpg" width="1060px" height="auto">
+				<img src="Images/fp25.jpg" width="1060px" height="auto"></br></br>
+				Here is a video of the assembly, which was fairly fun due to how everything snapped together:</br>
+				Shown below is a video of the result.</br>
+				<video width="800" height="auto" controls>
+				<source src="Images/fp26.mp4" type="video/mp4">
+				</video></br>
+				<a href="Images/fp26.mp4" download>Assembly Box</a>Click this if your video does not appear to download.</a>
+				(By this point I had recieved my components, but I wanted to continue and finish up my parts before worrying about the components.)</br></br>
+				<a href="Final Project/Final Project.f3d" download>Final Project CAD File</a>.</br></br>
+				<a href="Final Project/Box/Final Project Box DXF.dxf" download>Final Project Box DXF</a>.</br></br>
+				<hr></br></br>
+				<h2>Final Assembly</h2>
+				At this stage, I had finished both 3D Printing, Laser Cutting, and received my components(and soldered pins onto the Digispark but I forgot to take pictures.. However, I had not yet assembled everything, 
+				and the first thing I did was mess with the wiring. While it did take a few tries to get right, I finally got it done. In case the picture below is unclear, my connections were:</br></br>
+				Digispark:Rotary Encoder</br>
+				5V:GND</br>
+				GND:+</br>
+				P0:CLK</br>
+				P1:DT</br>
+				P2:SW</br></br>
+				<img src="Images/fp27.jpg" width="1060px" height="auto"></br></br>
+				Now came the problem of attaching the components to stay in the box. I discovered that the micro USB port fit perfectly so as long as it was never unplugged the Digispark would not be a problem,
+				and even then it could be easily reattached by opening up the top of the box to do the connection again. In the case of the Rotary Encoder, I decided to tie it down with some string.</br></br>
+				<img src="Images/fp28.jpg" width="1060px" height="auto">
+				<img src="Images/fp29.jpg" width="1060px" height="auto"></br></br>
+				With this, the physical assembly is done.</br></br>
+				<hr/></br></br>
+				After that, I needed to add in the code, but due to conflicting deadlines with another upcoming assignment from other modules, I was unable to find the time to create a new sketch from the start, 
+				\and found one that did roughly what I wanted. If I had more time, I would have wanted to script a function to pause and play. The files can be found here, with the original creator's page being below as well.
+				<a href="Final Project/Final Project.f3d" download>Final Project CAD File</a>.</br></br>
+				<a href="Final Project/Volumez_Control/Volume_Control.ino" download>Volume Control Sketch</a>.</br></br>
 				
+				<hr></br></br>
 			</p>
 		</div>
 		<div id="Back">
